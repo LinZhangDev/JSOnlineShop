@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0"/>
+    <title>Web Skill Shop</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style/style.css" />
+  </head>
+  <body>
+    <section class="main-section section-user inactive">
+        <button class="btn-close btn-close-user"></button>
+        <div class="user-form">
+          <div class="btn-container">
+            <button class="btn-login active">Login</button>
+            <button class="btn-signup inactive">Sign up</button>
+          </div>
+          <div class="form-container">
+            <form class="login-form active">
+              UserEmail:<input type="text" class="user-name-in" placeholder="Email" required/>
+              Password:<input type="password" class="user-password-in" placeholder="Password" required/>
+              <button class="submit-login">Login</button>
+              <span class="login-success"></span>
+            </form>
+            <form class="signup-form inactive">
+              Name:
+              <div class="signup-fullname">
+                <input type="text" class="signup-FN" placeholder="First Name" required/>
+                <input type="text" class="signup-LN" placeholder="Last Name" required/>
+              </div>
+              Email:<input type="email" class="signup-email" required/>
+              Password:    <span class="password-safety"></span><input type="password"  class="signup-password" required/>
+              Confirm Password:  <span class="password-re-safety"></span><input type="password"  class="signup-re-password" required/>
+              <button class="submit-login">Sign up</button><span class="signup-success"></span>
+            </form>
+          </div>
+        </div>
+    </section>
+    <section class="main-section section-cart inactive">
+      <button class="btn-close btn-close-cart"></button>
+      <div class="cart-wrapper"> 
+        <div class="cart-title">Shopping Cart</div>
+        <div class="cart-list">
+        </div>
+        <div class="cart-total"></div>
+        <button class="cart-checkout">Check out</button>
+      </div>
+    </section>
+    <section class="main-section section-filter">
+      <button class="btn-close btn-close-filter"></button>
+    </section>
+    <section id="section-body" class="body-section">
+        <div class="header">
+            <div class="header-left">Web Skill Shop</div>
+            <div class="header-right">
+                <button class="btn-user">User</button>
+                <button class="btn-cart">Cart<span class="cart-amount"></span></button>
+            </div>
+        </div>
+        <div class="head-content">
+          <div class="head-banner">
+            <div class="head-banner-wrapper">
+              <h1>Varmilo</h1>
+            </div>
+          </div>
+          <div id="head-slider" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="slider-img slider-img1">
+                      <h1>Supreme</h1>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="slider-img slider-img2">
+                      <h1>RTX 3080</h1>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="slider-img slider-img3">
+                      <h1>Air Jordan</h1>
+                  </div>
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"  data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"  data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+          </div>
+        </div>
+        <div class="filter-div">
+          <div class="button-div">
+            <button class="btn-category">Category <span class="btn-arrow btn-arrow-c">▼</span></button>
+            <button class="btn-sortby">Sorted by <span class="btn-arrow btn-arrow-s">▼</span></button>
+          </div>
+            <div class="filter-category inactive">
+              <ul>
+                <li><button class="filter-category-btn filter-all">All</button></li>
+                <li><button class="filter-category-btn filter-shoes">Shoes</button></li>
+                <li><button class="filter-category-btn filter-pcs">PC</button></li>
+                <li><button class="filter-category-btn filter-keyboards">Keyboards</button></li>
+                <li><button class="filter-category-btn filter-consoles">Consoles</button></li>
+                <li><button class="filter-category-btn filter-phones">Phones</button></li>
+              </ul>
+            </div>
+            <div class="filter-sorted inactive">
+              <ul>
+                <li><button class="filter-sorted-btn filter-name">Name A - Z</button></li>
+                <li><button class="filter-sorted-btn filter-pricelow">Price low - high</button></li>
+                <li><button class="filter-sorted-btn filter-pricehigh">Price high - low</button></li>
+              </ul>
+            </div>
+        </div>
+        <div class="product-list">
+
+        </div>
+        <section id="section-footer" class="body-section">
+          <h1>Web Skill Shop</h1>
+          <h2>Desgin and Build by <span>@Lin Zhang</span></h2>
+        </section>
+    </section>
+    <section class="main-section section-item inactive">
+      <div class="item-wrapper">
+      </div>
+    </section>
+    <script src="./js/user.js"></script>
+    <script src="./js/products.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+  </body>
+</html>
